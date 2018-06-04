@@ -27,12 +27,12 @@ To start off, clone the repository and create a new branch.
 To install the node modules run:
 ~~~
 npm install
-~~~~
+~~~
 
 To create the JS bundle and run the watcher run:
 ~~~
 npm run watch
-~~~~
+~~~
 
 You can use whatever npm modules and PHP framework you are comfortable with. 
 
