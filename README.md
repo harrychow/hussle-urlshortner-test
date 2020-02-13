@@ -1,5 +1,20 @@
 # Url Shortner
 
+To run this in a container environment , you can use the included docker-compose file to start running the server:
+
+~~~
+docker-compose up -d
+~~~
+
+This will create a container with php and react installed.
+
+
+The api endpoints are accessible directly by localhost/api.php.
+
+This is used by the frontend for api access.
+
+---
+
 Without using an external database, we'd like you to create a URL shortening service. 
 
 There should be an endpoint that responds to POST with a json body containing a URL, which responds with a JSON repsonse of the short url and the orignal URL, as in the following curl example:
