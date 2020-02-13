@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Message, Form } from "semantic-ui-react";
 
 class AppContainer extends Component {
 
@@ -22,7 +21,6 @@ class AppContainer extends Component {
 
         const data = new FormData();
         data.append('url', this.state.url);
-        console.log(data);
 
         const axios = require('axios');
         var self = this;
@@ -38,30 +36,12 @@ class AppContainer extends Component {
                     submitSuccess: false,
                     submitFalse: true
                 });
-                console.log(error);
             });
-
-        console.log(this.state);
     }
 
 
     render() {
-        let message = "";
-        if (this.state.submitSuccess && !this.state.submitFail) {
-            message = <Message
-                    positive
-                    header="Your user registration was successful"
-                    content="You may now log-in with the username you have chosen"
-                />;
-        } else if (!this.state.submitSuccess && this.state.submitFail) {
-            message = <Message
-                negative
-                header="Missing fields!"
-            />;
-        }
-
         return (
-
             <form onSubmit={this.handleURLSubmit}>
                 <label>
                     URL:
